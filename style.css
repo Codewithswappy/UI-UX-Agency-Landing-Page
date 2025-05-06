@@ -40,28 +40,28 @@ nav {
   width: 100%;
   height: 60px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  padding: 20px 70px;
+  padding: 0px 70px;
   position: fixed;
   z-index: 10;
   /* position: relative; */
   /* margin-top: 24px; */
   /* border-bottom: 1px solid #9b9a9a; */
+  border-bottom: 1px solid #dadada;
 }
 
 nav h1 {
   font-family: gilroy-heavy;
   font-size: 25px;
   font-weight: 600;
-  width: 40%;
+
 }
 
 .nav-right {
-  width: 40%;
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
   text-transform: uppercase;
   font-family: gilroy-medium;
   font-weight: 700;
@@ -73,7 +73,6 @@ nav h1 {
 }
 
 .nav-right h4 {
-  margin-bottom: 3vw;
   cursor: pointer;
 }
 
@@ -83,6 +82,7 @@ nav h1 {
   display: inline-block;
   transform: translateY(25px);
 }
+
 
 .nav-right h5 {
   margin-top: 1vw;
@@ -94,7 +94,6 @@ nav h1 {
 .lets-talk {
   /* background-color: #0cc05a;
   border-radius: 20px; */
-  width: 125px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -117,20 +116,21 @@ nav h1 {
 
 .lets-talk svg {
   height: 1.3vw;
-  padding-left: 8px;
+  
 }
 
 
 
 .nav-bottom {
-  width: 89%;
-  height: 0;
+  width: 90%;
+  height: 100px;
   position: absolute;
   background-color: #111;
-  top: 100%;
+  top: 0;
   z-index: 9;
-  border-bottom: 1px solid #dadada;
+  /* border-bottom: 1px solid #dadada; */
 }
+
 
 /* PAGE1 */
 
@@ -241,7 +241,7 @@ nav h1 {
 }
 
 #page2left {
-  height: 100vh;
+  min-height: 100vh;
   width: 40%;
   display: flex;
   align-items: flex-start;
@@ -1263,4 +1263,123 @@ summary::marker {
   justify-content: space-between;
   font-family: gilroy-regular;
   padding: 1vw;
+}
+
+.navbar-mob {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  background-color: #111;
+  color: white;
+  font-family: gilroy-bold;
+  position: fixed;
+  width: 50%;
+  height: 100vh;
+  top: 60px;
+  right: -100%; 
+  transition: left 10s linear;
+  z-index: 1;
+}
+
+.navbar-mob.show {
+  right: 0; 
+}
+
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+}
+
+.contact-btn {
+  background-color: #0cc05a;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1em;
+  font-family: gilroy-bold;
+}
+
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  right: 60px;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 11;
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* Toggle X icon */
+.menu-toggle.open .bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.menu-toggle.open .bar2 {
+  opacity: 0;
+}
+
+.menu-toggle.open .bar3 {
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+
+@media screen and (max-width: 769px) {
+  .menu-toggle {
+    display: block;
+  }
+  .navbar-mob {
+    right: 100%;
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+  }
+  .nav-right{
+    display: none;
+  }
+  .lets-talk{
+    display: none;
+  }
+  #moving-div{
+    padding: 2vw;
+  }
+  #moving-div .move img{
+    height: 2vw;
+    margin: 0 1.2vw;
+  }
+  #page2 h5{
+    width: 100%;
+  }
+}
+
+@media (min-width: 834px) and (max-width: 1024px) {
+  .navbar-mob{
+    display: none;
+  }
+  
+  
 }

@@ -6,7 +6,7 @@ function navAnimation() {
     let tl = gsap.timeline();
 
     tl.to(".nav-bottom", {
-      height: "21vh",
+      height: "22vh",
     });
 
     tl.to(".nav-right h5", {
@@ -118,8 +118,15 @@ function page11Animations() {
   })
 }
 
-navAnimation()
+// navAnimation()
 page2Animation()
 page3VideoAnimation()
 page11Animations()
 
+const toggle = document.getElementById('menu-toggle');
+const navbar = document.getElementById('mobnavbar');
+
+toggle.addEventListener('click', () => {
+  navbar.classList.toggle('show');
+  toggle.classList.toggle('open');
+});
