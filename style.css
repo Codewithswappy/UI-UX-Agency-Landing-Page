@@ -132,6 +132,10 @@ nav h1 {
 }
 
 
+#main{
+  min-width: fit-content;
+}
+
 /* PAGE1 */
 
 #page1 {
@@ -1374,6 +1378,32 @@ summary::marker {
   #page2 h5{
     width: 100%;
   }
+  #page1 h1{
+    font-size: 6vh;
+  }
+  #page1 h4{
+    font-size: 1.2rem;
+  }
+  #moving-div .move img{
+    height: 5vw;
+  }
+  #moving-div{
+    bottom: 15%;
+    width: 100%;
+  }
+  #page3{
+    height: 50vh;
+  }
+  .page3-center .icon {
+    padding: 8vw;
+  }
+  .page3-center .icon i {
+    font-size: 5vw;
+  }
+  .box {
+    width: 500px;
+    height: 300px;
+}
 }
 
 @media (min-width: 834px) and (max-width: 1024px) {
