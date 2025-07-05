@@ -109,7 +109,7 @@ function page11Animations() {
       trigger: ".btm11-animation",
       scroller: "body",
       // markers:true,
-      start: "top 90%",
+      start: "top 80%",
       end: "top 0%",
       scrub: true,
     },
