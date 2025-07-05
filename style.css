@@ -132,13 +132,10 @@ nav h1 {
 }
 
 
-<<<<<<< HEAD
 #main{
   min-width: fit-content;
 }
 
-=======
->>>>>>> cbe4faaa4b7408321c221a59317719405727418a
 /* PAGE1 */
 
 #page1 {
@@ -1381,7 +1378,6 @@ summary::marker {
   #page2 h5{
     width: 100%;
   }
-<<<<<<< HEAD
   #page1 h1{
     font-size: 6vh;
   }
@@ -1408,8 +1404,6 @@ summary::marker {
     width: 500px;
     height: 300px;
 }
-=======
->>>>>>> cbe4faaa4b7408321c221a59317719405727418a
 }
 
 @media (min-width: 834px) and (max-width: 1024px) {
